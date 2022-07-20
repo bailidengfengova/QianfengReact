@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import './Tabbar.css'
+import style from './Tabbar.module.css'
 
 export default class Tabbar extends Component {
     render() {
@@ -8,14 +8,14 @@ export default class Tabbar extends Component {
             <div>
                 <ul>
                     <li>
-                        <NavLink to="/films" activeClassName='hfactive'>电影</NavLink>
+                        <NavLink to="/films" activeClassName={style.hfactive}>电影</NavLink>
                         {/* <a href='#/films'>电影</a> */}
                     </li>
                     <li>
-                        <NavLink to="/cinemas" activeClassName='hfactive'>影院</NavLink>
+                        <NavLink to="/cinemas" activeClassName={style.hfactive}>影院</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/center" activeClassName='hfactive'>我的</NavLink>
+                        <NavLink to="/center" activeClassName={style.hfactive}>我的</NavLink>
                     </li>
                 </ul>
             </div>
