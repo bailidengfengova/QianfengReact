@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './04-router/App'
+import App from './05-redux/App'
 
 
 ReactDOM.render(
     // <React.StrictMode>
-        <App/>
+    <App />
     // </React.StrictMode>
-    , 
-document.getElementById("root"))
+    ,
+    document.getElementById("root"))

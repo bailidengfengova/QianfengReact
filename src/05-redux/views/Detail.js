@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import store from '../redux/store'
+import { hide, show } from '../redux/actionCreator/TabbarActionCreator'
 
 export default function Detail(props) {
     // query传参
@@ -7,11 +9,12 @@ export default function Detail(props) {
     // console.log(props.location.state.myid);
 
     useEffect(() => {
-        console.log('create')
 
+        store.dispatch(hide())
         // store.dispatch 通知
         return () => {
             console.log('distory')
+            store.dispatch(show())
         }
     }, [])
 
