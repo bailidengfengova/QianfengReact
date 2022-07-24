@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import {HashRouter as Router,BrowserRouter,Redirect,Route, Switch} from 'react-router-dom'
+import { HashRouter as Router, BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
 
 import Films from '../views/Films'
-import Cinemas from  '../views/Cinemas'
+import Cinemas from '../views/Cinemas'
 import Center from '../views/Center'
 import NotFound from '../views/NotFound'
 import Detail from '../views/Detail'
 import Login from '../views/Login'
+import City from '../views/City'
 // import Nowplaying from '../views/films/Nowplaying'
 
 function isAuth() {
@@ -29,18 +30,19 @@ export default class IndexRouter extends Component {
                         return isAuth() ? <Center {...props}/> : <Redirect to="/login"/>
                     }} /> */}
                     {/* withRouter写法 */}
-                    <Route path="/center" render={() =>{
-                        return isAuth() ? <Center/> : <Redirect to="/login"/>
+                    <Route path="/center" render={() => {
+                        return isAuth() ? <Center /> : <Redirect to="/login" />
                     }} />
 
 
                     <Route path="/login" component={Login} />
+                    <Route path="/city" component={City} />
 
                     {/* 动态路由方法 */}
                     <Route path="/detail/:myid" component={Detail} />
                     {/* <Route path="/detail" component={Detail} /> */}
 
-                    <Redirect from="/" to="/films" exact/>
+                    <Redirect from="/" to="/films" exact />
 
                     <Route component={NotFound} />
                 </Switch>
