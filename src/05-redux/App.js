@@ -13,7 +13,7 @@ export default class App extends Component {
     // store.subsribe 订阅
     componentDidMount() {
         store.subscribe(() => {
-            // 不会立即触发，有人通知的时候才会触发
+            // 不会立即触发，有人通知的时候才会触发 想要哪一个得自己拿
             console.log('app 中订阅', store.getState().TabbarReducer.show);
 
             this.setState({

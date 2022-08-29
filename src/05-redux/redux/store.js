@@ -3,10 +3,12 @@
 import { combineReducers, createStore } from "redux";
 import CityReducer from "./reducers/CityReducer";
 import TabbarReducer from "./reducers/TabbarReducer";
+import CinemaListReducer from "./reducers/CinemaLIstReducer";
 
 const reducer = combineReducers({
     CityReducer,
-    TabbarReducer
+    TabbarReducer,
+    CinemaListReducer
 })
 const store = createStore(reducer);
 
